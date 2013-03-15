@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+    
+<struts>   
+    
+    <constant name="struts.devMode" value="true" />
+    <constant name="struts.custom.i18n.resources" value="resources.i18n.global" />
+    <constant name="struts.i18n.reload" value="true" />
+    <constant name="struts.i18n.encoding" value="UTF-8" />
+    <constant name="struts.serve.static.browserCache" value="false" />
+    <constant name="struts.configuration.xml.reload" value="true" />
+    <constant name="struts.ognl.enableExpressionCache" value="false" />
+    
+    <constant name="struts.action.excludePattern" value="/Tester" />
+    
+    <package name="default" extends="struts-default">
+        
+        <!-- actions -->
+        <action name="authentication" class="actions.global.Authentication">
+            <result name="success">/pages/global/redirectDashboard.jsp</result>
+            <result name="error">/pages/global/error.jsp</result>
+            <result name="input">/pages/global/login.jsp</result>
+        </action>
+        
+        <action name="login" class="actions.global.Authentication">
+            <result name="success">/pages/global/redirectDashboard.jsp</result>
+            <result name="error">/pages/global/error.jsp</result>
+            <result name="input">/pages/global/login.jsp</result>
+        </action>
+        
+        <action name="dashboard">
+            <result name="success">/pages/global/dashboard.jsp</result>
+            <result name="error">/pages/global/error.jsp</result>
+            <result name="input">/pages/global/dashboard.jsp</result>
+        </action>
+        
+        <action name="configuration" class="actions.global.ConfigurationAction">
+            <result name="success">/pages/global/configuration.jsp</result>
+            <result name="error">/epages/global/error.jsp</result>
+            <result name="input">/pages/global/configuration.jsp</result>
+        </action>
+        
+        <action name="saveConfiguration" class="actions.global.SaveConfiguration">
+            <result name="success">/pages/global/dataSaved.jsp</result>
+            <result name="error">/pages/global/error.jsp</result>
+            <result name="input">/pages/global/configuration.jsp</result>
+        </action>
+        
+        <action name="router">
+            <result name="success">/pages/router/router.jsp</result>
+            <result name="error">/pages/global/error.jsp</result>
+            <result name="input">/pages/router/router.jsp</result>
+        </action>
+        
+        <action name="routerConfiguration">
+            <result name="success">/pages/router/routerConfiguration.jsp</result>
+            <result name="error">/pages/global/error.jsp</result>
+            <result name="input">/pages/router/routerConfiguration.jsp</result>
+        </action>
+        
+        <action name="ids_ips">
+            <result name="success">/pages/idsips/ids_ips.jsp</result>
+            <result name="error">/error.jsp</result>
+            <result name="input">/pages/idsips/ids_ips.jsp</result>
+        </action>
+        
+        <action name="trafficShaper">
+            <result name="success">/pages/shaper/trafficShaper.jsp</result>
+            <result name="error">/pages/global/error.jsp</result>
+            <result name="input">/pages/shaper/trafficShaper.jsp</result>
+        </action>
+        
+        <action name="trafficFilter">
+            <result name="success">/pages/filter/trafficFilter.jsp</result>
+            <result name="error">/pages/global/error.jsp</result>
+            <result name="input">/pages/filter/trafficFilter.jsp</result>
+        </action>
+        
+        <action name="logout" class="actions.global.Logout">
+            <result name="success">/pages/global/logout.jsp</result>
+            <result name="error">/pages/global/error.jsp</result>
+            <result name="input">/pages/globallogout.jsp</result>
+        </action>
+        
+        <action name="chains">
+            <result name="success">/pages/shaper/chains/chains.jsp</result>
+            <result name="error">/pages/global/error.jsp</result>
+            <result name="input">/pages/shaper/chains/chains.jsp</result>
+        </action>
+        
+        <action name="tableChains" class="actions.shaper.chains.TableChains">
+            <result name="success">/pages/shaper/chains/tableChains.jsp</result>
+            <result name="error">/pages/global/error.jsp</result>
+            <result name="input">/pages/shaper/chains/tableChains.jsp</result>
+        </action>
+        
+        <action name="changeStatusChain" class="actions.shaper.chains.ChangeStatusChain">
+            <result name="success">/pages/global/message.jsp</result>
+            <result name="error">/pages/global/error.jsp</result>
+            <result name="input">/pages/shaper/trafficShaper.jsp</result>
+        </action>
+        
+        <action name="editChain" class="actions.shaper.chains.EditChain">
+            <result name="success">/pages/shaper/chains/editChain.jsp</result>
+            <result name="error">/pages/global/error.jsp</result>
+            <result name="input">/pages/shaper/chains/editChain.jsp</result>
+        </action>
+        
+        <action name="requestDataEditChain" class="actions.shaper.chains.RequestDataEditChain">            
+            <result name="success">/pages/shaper/chains/formEditChain.jsp</result>
+            <result name="error">/pages/global/error.jsp</result>
+            <result name="input">/pages/shaper/chains/formEditChain.jsp</result>
+        </action>
+        
+        <action name="saveChain" class="actions.shaper.chains.SaveChain">            
+            <result name="success">/pages/global/message.jsp</result>
+            <result name="error">/pages/global/error.jsp</result>
+            <result name="input">/pages/shaper/chains/formNewChain.jsp</result>
+        </action>
+        
+        <action name="deleteChain" class="actions.shaper.chains.DeleteChain">            
+            <result name="success">/pages/global/message.jsp</result>
+            <result name="error">/pages/global/error.jsp</result>
+            <result name="input">/pages/shaper/chains/trafficShaper.jsp</result>
+        </action>
+        
+        <action name="newChain">
+            <result name="success">/pages/shaper/chains/newChain.jsp</result>
+            <result name="error">/pages/global/error.jsp</result>
+            <result name="input">/pages/shaper/chains/newChain.jsp</result>
+        </action>
+        
+        <action name="formNewChain" class="actions.shaper.chains.FormNewChain">
+            <result name="success">/pages/shaper/chains/formNewChain.jsp</result>
+            <result name="error">/pages/global/error.jsp</result>
+            <result name="input">/pages/shaper/chains/formNewChain.jsp</result>
+        </action>        
+        
+        <action name="filters">
+            <result name="success">/pages/shaper/filters/filters.jsp</result>
+            <result name="error">/pages/global/error.jsp</result>
+            <result name="input">/pages/shaper/filters/filters.jsp</result>
+        </action>   
+        
+        <action name="tableFilters" class="actions.shaper.filters.TableFilters">
+            <result name="success">/pages/shaper/filters/tableFilters.jsp</result>
+            <result name="error">/pages/global/error.jsp</result>
+            <result name="input">/pages/shaper/filters/tableFilters.jsp</result>
+        </action>   
+        
+        <action name="newFilters">
+            <result name="success">/pages/shaper/filters/newFilters.jsp</result>
+            <result name="error">/pages/global/error.jsp</result>
+            <result name="input">/pages/shaper/filters/newFilters.jsp</result>
+        </action>                  
+        
+    </package>    
+    
+</struts>

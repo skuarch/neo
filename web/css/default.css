@@ -1,0 +1,12 @@
+body {
+    padding-top: 60px;
+    /*-moz-user-select: none;*/
+}
+img {
+    width: 100%
+}
+
+._1{
+    width: 5%;
+    max-width: 16px;
+}
