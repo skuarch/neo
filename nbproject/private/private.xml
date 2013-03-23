@@ -10,4 +10,15 @@
             </bookmark>
         </file>
     </editor-bookmarks>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/1">
+        <file>file:/C:/Users/skuarch/Documents/NetBeansProjects/neo/src/java/struts.xml</file>
+        <file>file:/C:/Users/skuarch/Documents/NetBeansProjects/neo/src/java/resources/i18n/global.properties</file>
+        <file>file:/C:/Users/skuarch/Documents/NetBeansProjects/neo/web/js/i18n/global.properties</file>
+        <file>file:/C:/Users/skuarch/Documents/NetBeansProjects/neo/web/js/global/functions.js</file>
+        <file>file:/C:/Users/skuarch/Documents/NetBeansProjects/neo/web/pages/shaper/filters/filters.jsp</file>
+        <file>file:/C:/Users/skuarch/Documents/NetBeansProjects/neo/web/pages/shaper/filters/newFilters.jsp</file>
+        <file>file:/C:/Users/skuarch/Documents/NetBeansProjects/neo/src/java/hibernate.cfg.xml</file>
+        <file>file:/C:/Users/skuarch/Documents/NetBeansProjects/neo/src/java/model/util/HibernateUtil.java</file>
+        <file>file:/C:/Users/skuarch/Documents/NetBeansProjects/neo/src/java/model/dao/DAO.java</file>
+    </open-files>
 </project-private>
